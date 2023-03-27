@@ -1,0 +1,116 @@
+:root {
+	--primary: #1e1e1e;
+	--secondary: #f7f5ff;
+	--tertiary: #ffe278;
+	--tertiary_alt: #ffe278;
+	--body-font: "Arial";
+	--header-font: "Arial Black";
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--primary);
+	color: var(--secondary);
+	font-family: var(--body-font);
+	font-size: 0.9em;
+}
+
+#index {
+	background: url(/images/index/clouds.jpg) no-repeat center center fixed;
+}
+
+
+a {
+	color: var(--secondary);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--tertiary);
+	text-shadow: 0px 0px 30px var(--tertiary);
+	-moz-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--header-font);
+}
+
+blockquote {
+	margin: 0 0 10px 10px;
+	padding: 0 0 0 10px;
+	border-left: solid 1px var(--secondary);
+}
+
+nav, header {
+	display: contents;
+}
+
+img, video {
+	max-width: 100%;
+	max-height: auto;
+}
+
+img:hover {
+	transition: all 0.2s ease-in;
+	-webkit-filter: brightness(130%); 
+}
+
+.pure-g > div {
+	box-sizing: border-box;
+}
+
+.p-1 {
+	padding: 1em;
+}
+
+.p-2 {
+	padding: 2em;
+}
+
+.p-5 {
+	padding: 5em;
+}
+
+.p-top-5 {
+	padding-top: 5em;
+}
+
+.p-top-10 {
+	padding-top: 10em;
+}
+
+.p-top-15 {
+	padding-top: 15em;
+}
+
+.index-img {
+	max-height: 12em;
+}
+
+.thesis-img {
+	max-height: 10em;
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.page-title { 
+  text-transform: uppercase;
+}
