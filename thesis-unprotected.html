@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> Spit Brimming With Futures </title>
+    <link rel='shortcut icon' type='image/x-icon' href='' />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-min.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <script>
+        // Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
+        // Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+        
+        //** Usage: Instantiate script by calling: var uniquevar=createsoundbite("soundfile1", "fallbackfile2", "fallebacksound3", etc)
+        //** Call: uniquevar.playclip() to play sound
+        
+        var html5_audiotypes={ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
+            "mp3": "audio/mpeg",
+            "mp4": "audio/mp4",
+            "ogg": "audio/ogg",
+            "wav": "audio/wav"
+        }
+        
+        function createsoundbite(sound){
+            var html5audio=document.createElement('audio')
+            if (html5audio.canPlayType){ //check support for HTML5 audio
+                for (var i=0; i<arguments.length; i++){
+                    var sourceel=document.createElement('source')
+                    sourceel.setAttribute('src', arguments[i])
+                    if (arguments[i].match(/\.(\w+)$/i))
+                        sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+                    html5audio.appendChild(sourceel)
+                }
+                html5audio.load()
+                html5audio.playclip=function(){
+                    html5audio.pause()
+                    html5audio.currentTime=0
+                    html5audio.play()
+                }
+                return html5audio
+            }
+            else{
+                return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio.")}}
+            }
+        }
+        
+        //Initialize:
+        var clicksound1=createsoundbite("audio/pearlpoem.wav")
+        
+    </script>
+</head>
+
+<body>
+    <div class="pure-g">
+        <div class="pure-u-1-1 align-center p-2">
+            <header>
+                <div class="page-title">
+                    <h1>Spit Brimming With Futures</h1>
+                </div>
+                <p><i class="las la-headphones"></i> best experienced with headphones </p>
+            </header>
+        </div>
+        <div class="pure-u-1-1 align-center p-2 p-top-5"> <video width="500" controls>
+                <source src="video/test.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+            </video> </div>
+        <div class="pure-u-1-3 align-right p-1 p-top-5"> <a href="#current" onclick="clicksound1.playclip()"><img class="thesis-img" src="images/thesis/transparentsample.png"> </a> </div>
+        <div class="pure-u-1-3 align-center p-1 p-top-5"> <img class="thesis-img" src="images/thesis/transparentsample.png"> </div>
+        <div class="pure-u-1-3 align-left p-1 p-top-5"> <img class="thesis-img" src="images/thesis/transparentsample.png"> </div>
+    </div>
+</body>
+
+</html>
