@@ -2,7 +2,6 @@
 	--primary: #1e1e1e;
 	--secondary: #f7f5ff;
 	--tertiary: #ffe278;
-	--tertiary_alt: #ffe278;
 	--body-font: "Arial";
 	--header-font: "Arial Black";
 }
@@ -23,7 +22,6 @@ body {
 #index {
 	background: url(images/index/clouds.jpg) no-repeat center center fixed;
 }
-
 
 a {
 	color: var(--secondary);
