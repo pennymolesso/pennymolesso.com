@@ -122,7 +122,6 @@ img:hover {
 }
 
 .staticrypt-page {
-	width: 360px;
 	padding: 8% 0 0;
 	margin: auto;
 	box-sizing: border-box;
@@ -133,18 +132,27 @@ img:hover {
 	z-index: 1;
 	color: var(--primary);
 	background: var(--secondary);
-	max-width: 360px;
-	margin: 0 auto 100px;
+	max-width: 25em;
+	margin: auto;
 	padding: 45px;
 	text-align: center;
 	box-shadow: 0.5em 0.5em 0.9em  var(--tertiary);
 	border-radius: 5px;
+
 }
+
+@media screen and (max-width:768px) {
+	.staticrypt-form {
+		max-width: 22em;
+		margin-top: 30%;
+	}
+}
+
 
 .staticrypt-form input[type="password"] {
 	outline: 0;
+	border-radius: 5px;
 	background: var(--secondary);
-	border: 1px var(--primary);
 	color: var(--primary);
 	width: 100%;
 	border: 0;
@@ -157,18 +165,19 @@ img:hover {
 .staticrypt-form .staticrypt-decrypt-button {
 	text-transform: uppercase;
 	outline: 0;
-	background: var(--quaternary);
+	background: var(--tertiary);
 	width: 100%;
 	border: 0;
 	padding: 15px;
-	color: var(--secondary);
+	color: var(--primary);
 	font-size: 14px;
 	cursor: pointer;
 	border-radius: 5px;
 }
 
 .staticrypt-form .staticrypt-decrypt-button:hover, .staticrypt-form .staticrypt-decrypt-button:active, .staticrypt-form .staticrypt-decrypt-button:focus {
-	background: var(--quaternary);
+	background: var(--tertiary);
+	box-shadow: 0.5em var(--tertiary);
 }
 
 .staticrypt-html {
