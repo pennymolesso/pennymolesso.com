@@ -131,17 +131,19 @@ img:hover {
 .staticrypt-form {
 	position: relative;
 	z-index: 1;
+	color: var(--primary);
 	background: var(--secondary);
 	max-width: 360px;
 	margin: 0 auto 100px;
 	padding: 45px;
 	text-align: center;
-	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+	box-shadow: 0.1em 0.1em 0.2em  var(--tertiary);
 }
 
 .staticrypt-form input[type="password"] {
 	outline: 0;
-	background: var(--primary);
+	background: var(--secondary);
+	color: var(--primary);
 	width: 100%;
 	border: 0;
 	margin: 0 0 15px;
