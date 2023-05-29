@@ -55,9 +55,9 @@ nav > p {
 	padding: 0.5em 2em;
 }
 
-video {
-	max-width: 100%;
-	max-height: auto;
+.video {
+	aspect-ratio: 16 / 9;
+	width: 90%;
 }
 
 a {
