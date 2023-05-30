@@ -68,7 +68,6 @@ body {
 	padding: 15px;
 	color: var(--black);
 	cursor: pointer;
-	border-radius: 5px;
 }
 
 .staticrypt-form .staticrypt-decrypt-button:hover, .staticrypt-form .staticrypt-decrypt-button:active, .staticrypt-form .staticrypt-decrypt-button:focus {
